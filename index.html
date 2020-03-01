@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h1 class="text-center mb-5">Ninja Cat</h1>
+    <div class="row justify-content-center">
+        <img src="img\ninja0.png"  id="imggrid0" alt="ninjahead" data-alt="img\cat0.png">
+    </div>
+    <div class="row justify-content-center">
+        <img src="img\ninja1.png" alt="ninjabody" id="imggrid1"  data-alt="img\cat1.png">
+    </div>
+    <div class="row justify-content-center">
+        <img src="img\ninja2.png" alt="ninjabody" id="imggrid2"  data-alt="img\cat2.png">
+    </div>
+    <div class="row justify-content-center">
+        <img src="img\ninja3.png" alt="ninjalegs" id="imggrid3"  data-alt="img\cat3.png">
+    </div>
+    <div class="row justify-content-center">
+        <img src="img\ninja4.png" alt="ninjafeet" id="imggrid4"  data-alt="img\cat4.png">
+    </div>
+
+  </div>
+    <script>
+    //     $(document).ready(fuction(){
+
+    //    $('img').click(function(){
+    //     $(this).attr('src','data-img-swap')
+    //    });
+    //    });
+
+    $(document).ready(function(){
+        $('img').click(function() {
+        var mainIMG = $(this).attr("src");
+        var hiddenIMG = $(this).attr("data-alt");
+        $(this).attr("src", hiddenIMG);
+        $(this).attr("data-alt", mainIMG);
+        });
+    })
+    </script>
+</body>
+</html>
